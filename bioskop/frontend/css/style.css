@@ -1,4 +1,6 @@
-/* --- Penanda Judul Section Kustom --- */
+/* ============================================
+   1. SECTION TITLE
+   ============================================ */
 .section-title-custom {
     font-size: 13px !important;
     font-weight: 800 !important;
@@ -9,7 +11,9 @@
     text-transform: uppercase;
 }
 
-/* --- Pengatur Pop-up Modul Auth Full Screen --- */
+/* ============================================
+   2. AUTH MODULE (LOGIN/REGISTER)
+   ============================================ */
 .auth-module-wrapper {
     background: radial-gradient(circle, #4676a4 0%, #294a6b 100%) !important;
     height: 100vh !important;
@@ -28,7 +32,6 @@
     display: none !important;
 }
 
-/* --- Card SAMS Minimalis (Figma Mockup) --- */
 .auth-wrapper {
     width: 100%;
     max-width: 420px;
@@ -65,7 +68,6 @@
     color: #000000 !important;
 }
 
-/* Group Form Input */
 .input-group {
     text-align: left;
     margin-bottom: 20px;
@@ -132,7 +134,6 @@
     cursor: pointer;
 }
 
-/* OTP */
 .otp-desc {
     font-size: 12px;
     color: #444444;
@@ -165,182 +166,16 @@
     margin-top: 15px;
 }
 
-/* --- Penanda Judul Section Kustom --- */
-.section-title-custom {
-    font-size: 13px !important;
-    font-weight: 800 !important;
-    letter-spacing: 0.05em;
-    color: #1e293b;
-    border-left: 4px solid #2b6cb0;
-    padding-left: 8px;
-    text-transform: uppercase;
-}
-
-/* --- Pengatur Pop-up Modul Auth Full Screen --- */
-.auth-module-wrapper {
-    background: radial-gradient(circle, #4676a4 0%, #294a6b 100%) !important;
-    height: 100vh !important;
-    width: 100vw !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    padding: 20px;
-    position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
-    z-index: 99999 !important;
-}
-
-.hidden-wrapper {
-    display: none !important;
-}
-
-/* --- Card SAMS Minimalis (Figma Mockup) --- */
-.auth-wrapper {
-    width: 100%;
-    max-width: 420px;
-}
-
-.auth-card {
-    background: #ffffff !important;
-    width: 100%;
-    padding: 40px 30px !important;
-    border-radius: 4px !important;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3) !important;
-    text-align: center;
-}
-
-.dynamic-section {
-    display: none;
-}
-
-.dynamic-section.active {
-    display: block !important;
-    animation: slideUp 0.35s ease-out;
-}
-
-@keyframes slideUp {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.auth-h2 {
-    font-size: 20px !important;
-    font-weight: 800 !important;
-    margin-bottom: 30px !important;
-    letter-spacing: 1px !important;
-    color: #000000 !important;
-}
-
-/* Group Form Input */
-.input-group {
-    text-align: left;
-    margin-bottom: 20px;
-}
-
-.input-group label {
-    font-size: 10px;
-    color: #555555;
-    margin-bottom: 6px;
-    display: block;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-}
-
-.input-group input {
-    width: 100%;
-    padding: 11px 12px;
-    background: #ffffff;
-    border: 1px solid #cccccc;
-    border-radius: 4px;
-    color: #000000;
-    font-size: 13px;
-    outline: none;
-}
-
-.input-group input:focus {
-    border-color: #000000;
-}
-
-.action-links {
-    text-align: right;
-    margin-bottom: 20px;
-}
-
-.action-links a, .back-link a {
-    font-size: 10px;
-    color: #000000;
-    font-weight: 700;
-    text-decoration: underline;
-}
-
-.switch-text {
-    font-size: 11px;
-    color: #555555;
-    margin-top: 20px;
-}
-
-.switch-text a {
-    color: #000000;
-    text-decoration: none;
-    font-weight: 800;
-}
-
-.btn-black {
-    width: 100%;
-    background: #000000;
-    color: #ffffff;
-    border: none;
-    padding: 12px;
-    border-radius: 4px;
-    font-weight: 700;
-    font-size: 12px;
-    letter-spacing: 1px;
-    cursor: pointer;
-}
-
-/* OTP */
-.otp-desc {
-    font-size: 12px;
-    color: #444444;
-    margin-bottom: 20px;
-}
-
-.otp-input-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 8px;
-    margin-bottom: 20px;
-}
-
-.otp-box {
-    width: 55px;
-    height: 50px;
-    text-align: center;
-    font-size: 20px;
-    font-weight: 700;
-    border: 1px solid #cccccc;
-    border-radius: 4px;
-    outline: none;
-}
-
-.otp-box:focus {
-    border-color: #000000;
-}
-
-.back-link {
-    margin-top: 15px;
-}
-
-/* ========================================================
-   KUSTOM LOGIK LAYOUT JADWAL & KURSI DARI TEMAN (AMAN)
-   ======================================================== */
+/* ============================================
+   3. JADWAL & KURSI
+   ============================================ */
 .date-grid {
     display: flex;
     gap: 8px;
     overflow-x: auto;
     padding-bottom: 8px;
 }
+
 .date-btn {
     flex: 0 0 65px;
     text-align: center;
@@ -350,16 +185,19 @@
     border-radius: 4px;
     cursor: pointer;
 }
+
 .date-btn.active {
     background: #0f172a;
     color: white;
     border-color: #0f172a;
 }
+
 .time-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 8px;
 }
+
 .time-btn {
     padding: 10px;
     text-align: center;
@@ -370,11 +208,13 @@
     font-size: 12px;
     font-weight: 600;
 }
+
 .time-btn.active {
     background: #0077b6;
     color: white;
     border-color: #0077b6;
 }
+
 .btn-black-action {
     background: #000000;
     color: white;
@@ -383,11 +223,17 @@
     font-weight: 700;
     border-radius: 4px;
 }
+
 .btn-black-action:disabled {
     background: #cbd5e1;
     cursor: not-allowed;
 }
-.seat-map-scroll { overflow-x: auto; width: 100%; }
+
+.seat-map-scroll {
+    overflow-x: auto;
+    width: 100%;
+}
+
 .seat {
     padding: 6px 0;
     font-size: 10px;
@@ -398,60 +244,36 @@
     cursor: pointer;
     font-weight: 700;
 }
-.seat.selected { background: #2b6cb0 !important; color: white; border-color: #2b6cb0; }
-.seat.occupied { background: #cbd5e1; color: #94a3b8; cursor: not-allowed; }
-.bottom-bar-payment { background: #0f172a; border-radius: 4px; }
-.info-value-text { font-size: 15px; font-weight: 700; }
-.info-value-text.text-highlight { color: #f59e0b; }
 
-/* ============================================
-   AUTO SCROLL BANNER (STEP 5)
-   ============================================ */
-.auto-scroll-banner {
-    display: flex;
-    gap: 12px;
-    animation: scrollBanner 25s linear infinite;
-    width: max-content;
+.seat.selected {
+    background: #2b6cb0 !important;
+    color: white;
+    border-color: #2b6cb0;
 }
 
-.auto-scroll-banner:hover {
-    animation-play-state: paused;
+.seat.occupied {
+    background: #cbd5e1;
+    color: #94a3b8;
+    cursor: not-allowed;
 }
 
-.auto-scroll-banner .banner-item {
-    flex: 0 0 auto;
-    width: 160px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.bottom-bar-payment {
+    background: #0f172a;
+    border-radius: 4px;
 }
 
-.auto-scroll-banner .banner-item:hover {
-    transform: scale(1.08);
-    box-shadow: 0 10px 25px rgba(0, 119, 182, 0.4);
+.info-value-text {
+    font-size: 15px;
+    font-weight: 700;
 }
 
-@keyframes scrollBanner {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .auto-scroll-banner .banner-item {
-        width: 120px;
-    }
-    .auto-scroll-banner {
-        animation-duration: 20s;
-    }
+.info-value-text.text-highlight {
+    color: #f59e0b;
 }
 
 /* ============================================
-   BANNER SLIDER STYLES
+   4. BANNER SLIDER
    ============================================ */
-/* Banner Slide - Tinggi Sama */
 .banner-slide {
     display: none;
     animation: fadeInSlide 0.5s ease-in-out;
@@ -463,7 +285,12 @@
     align-items: center;
 }
 
-/* Auto-scroll Banner - Perbaiki */
+@keyframes fadeInSlide {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Auto-scroll Banner */
 .auto-scroll-banner {
     display: flex;
     gap: 12px;
@@ -480,6 +307,11 @@
     width: 130px;
 }
 
+@keyframes scrollBanner {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
 @media (max-width: 768px) {
     .auto-scroll-banner .banner-item {
         width: 100px;
@@ -489,7 +321,7 @@
     }
 }
 
-/* Banner Item - Static (No Scroll) */
+/* Banner Item Static */
 .banner-item-static {
     transition: transform 0.3s ease;
 }
@@ -502,11 +334,92 @@
     aspect-ratio: 2/3;
 }
 
+.banner-item .poster-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.banner-item .poster-container:hover img {
+    transform: scale(1.1);
+}
+
+/* Judul Film */
+#now-playing-banner .banner-item > p,
+#coming-soon-banner .banner-item > p {
+    font-size: 9px !important;
+    margin-top: 6px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #7dd3fc;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    max-width: 130px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Badge SEGERA */
+.badge-segera {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    background: rgba(0, 0, 0, 0.85);
+    color: white;
+    font-size: 8px;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+    z-index: 10;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .banner-item .poster-container {
+        max-width: 100px;
+        max-height: 150px;
+    }
+    
+    #now-playing-banner .banner-item > p,
+    #coming-soon-banner .banner-item > p {
+        font-size: 8px !important;
+        max-width: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-item .poster-container {
+        max-width: 80px;
+        max-height: 120px;
+    }
+    
+    #now-playing-banner .banner-item > p,
+    #coming-soon-banner .banner-item > p {
+        font-size: 7px !important;
+        max-width: 80px;
+    }
+}
 /* ============================================
-   USER PROFILE MENU
+   6. USER PROFILE MENU
    ============================================ */
 #user-dropdown {
     animation: slideDown 0.2s ease-out;
+    min-width: 220px !important;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2) !important;
+    border: 1px solid #e2e8f0 !important;
+}
+
+#user-dropdown a {
+    text-decoration: none !important;
+}
+
+#user-dropdown a:hover {
+    background-color: #f1f5f9 !important;
 }
 
 @keyframes slideDown {
@@ -520,8 +433,46 @@
     }
 }
 
+#user-name-nav {
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    color: white !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100px;
+}
+
+#user-avatar {
+    width: 36px !important;
+    height: 36px !important;
+    border: 2px solid rgba(255, 255, 255, 0.8) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+#user-avatar:hover {
+    transform: scale(1.05);
+}
+
+#user-profile-menu button {
+    padding: 4px !important;
+}
+
+nav img[alt="Logo Bioskop 7"] {
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+nav img[alt="Logo Bioskop 7"]:hover {
+    transform: scale(1.15) rotate(-5deg);
+    filter: drop-shadow(0 4px 8px rgba(212, 165, 116, 0.5));
+}
+
 /* ============================================
-   RIWAYAT TIKET CARD
+   7. RIWAYAT TIKET
    ============================================ */
 .riwayat-card {
     background: white;
@@ -530,11 +481,14 @@
     padding: 16px;
     display: flex;
     gap: 16px;
-    transition: box-shadow 0.3s;
+    transition: all 0.3s;
+    cursor: pointer;
+    position: relative;
 }
 
 .riwayat-card:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .riwayat-poster {
@@ -582,185 +536,6 @@
     color: #065f46;
 }
 
-/* ============================================
-   FIX: HALAMAN HIDDEN HARUS BENAR-BENAR HILANG
-   ============================================ */
-#page-data-diri.hidden,
-#page-riwayat.hidden,
-#page-jadwal.hidden,
-#page-kursi.hidden {
-    display: none !important;
-}
-
-#page-home {
-    display: block !important;
-}
-
-#page-home.hidden {
-    display: none !important;
-}
-
-/* ============================================
-   FIX: TAMPILAN USERNAME DI NAVBAR
-   ============================================ */
-#user-name-nav {
-    font-size: 12px !important;
-    font-weight: 600 !important;
-    color: white !important;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 100px;
-}
-
-#user-avatar {
-    width: 36px !important;
-    height: 36px !important;
-    border: 2px solid rgba(255, 255, 255, 0.8) !important;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
-}
-
-#user-dropdown {
-    min-width: 220px !important;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2) !important;
-    border: 1px solid #e2e8f0 !important;
-}
-
-#user-dropdown a {
-    text-decoration: none !important;
-}
-
-#user-dropdown a:hover {
-    background-color: #f1f5f9 !important;
-}
-
-/* ============================================
-   LOGO BIOSKOP DI NAVBAR
-   ============================================ */
-nav img[alt="Logo Bioskop 7"] {
-    border-radius: 4px;
-}
-
-/* ============================================
-   AVATAR USER DI NAVBAR (HANYA GAMBAR)
-   ============================================ */
-#user-profile-menu button {
-    padding: 4px !important;
-}
-
-#user-avatar {
-    cursor: pointer;
-    transition: transform 0.2s;
-}
-
-#user-avatar:hover {
-    transform: scale(1.05);
-}
-
-/* ============================================
-   E-TICKET PAGE
-   ============================================ */
-/* ============================================
-   E-TICKET - PROFESSIONAL DESIGN
-   ============================================ */
-#page-e-ticket {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    z-index: 100;
-    overflow-y: auto;
-}
-
-#page-e-ticket main {
-    padding: 2rem 1rem;
-}
-
-#e-ticket-card {
-    max-width: 600px;
-    animation: slideUp 0.4s ease-out;
-}
-
-@keyframes slideUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    #page-e-ticket h1 {
-        font-size: 1.5rem;
-    }
-    
-    .border-l {
-        border-left: none !important;
-        border-top: 1px solid #e2e8f0 !important;
-        padding-left: 0 !important;
-        padding-top: 1.5rem !important;
-    }
-}
-
-#e-ticket-card {
-    border: 1px solid #e2e8f0;
-    max-width: 500px;
-}
-
-#page-e-ticket h1 {
-    font-size: 1.25rem;
-}
-
-#page-e-ticket .text-xl {
-    font-size: 1rem;
-}
-
-#page-e-ticket .text-base {
-    font-size: 0.875rem;
-}
-
-#page-e-ticket .text-xs {
-    font-size: 0.75rem;
-}
-
-/* Responsive untuk mobile */
-@media (max-width: 768px) {
-    #e-ticket-card {
-        flex-direction: column;
-    }
-    
-    #e-ticket-card .md\:w-2\/5,
-    #e-ticket-card .md\:w-3\/5 {
-        width: 100%;
-    }
-    
-    #page-e-ticket h1 {
-        font-size: 1rem;
-    }
-}
-
-#e-ticket-card {
-    border: 1px solid #e2e8f0;
-}
-
-/* ============================================
-   RIWAYAT TIKET - KLIK UNTUK DOWNLOAD
-   ============================================ */
-.riwayat-card {
-    cursor: pointer;
-    position: relative;
-}
-
-.riwayat-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
 .riwayat-card .download-hint {
     position: absolute;
     top: 10px;
@@ -793,35 +568,60 @@ nav img[alt="Logo Bioskop 7"] {
     display: none;
 }
 
-/* Logo Navbar - Efek Hover */
-nav img[alt="Logo Bioskop 7"] {
-    transition: all 0.3s ease;
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+/* ============================================
+   8. HALAMAN HIDDEN
+   ============================================ */
+#page-data-diri.hidden,
+#page-riwayat.hidden,
+#page-jadwal.hidden,
+#page-kursi.hidden,
+#page-home.hidden {
+    display: none !important;
 }
 
-nav img[alt="Logo Bioskop 7"]:hover {
-    transform: scale(1.15) rotate(-5deg);
-    filter: drop-shadow(0 4px 8px rgba(212, 165, 116, 0.5));
+#page-home {
+    display: block !important;
 }
 
 /* ============================================
-   HALAMAN PEMBAYARAN - RESPONSIVE
+   9. E-TICKET PAGE
    ============================================ */
-#page-pembayaran {
-    min-height: 100vh;
+#page-e-ticket {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 100;
+    overflow-y: auto;
 }
 
-#page-pembayaran .sticky {
-    position: sticky;
-    top: 1.5rem;
+#page-e-ticket main {
+    padding: 2rem 1rem;
 }
 
-/* Animasi untuk pilihan pembayaran */
-.border-2.hover\\:border-sky-500 {
-    transition: all 0.3s ease;
+#e-ticket-card {
+    max-width: 600px;
+    border: 1px solid #e2e8f0;
+    animation: slideUp 0.4s ease-out;
 }
 
-/* E-Ticket Responsive */
+#page-e-ticket h1 {
+    font-size: 1.25rem;
+}
+
+#page-e-ticket .text-xl {
+    font-size: 1rem;
+}
+
+#page-e-ticket .text-base {
+    font-size: 0.875rem;
+}
+
+#page-e-ticket .text-xs {
+    font-size: 0.75rem;
+}
+
 #page-e-ticket .aspect-\[2\/3\] {
     aspect-ratio: 2/3;
 }
@@ -835,20 +635,68 @@ nav img[alt="Logo Bioskop 7"]:hover {
         font-size: 1.25rem;
     }
     
-    #page-pembayaran .grid-cols-1 {
-        grid-template-columns: 1fr;
+    #page-e-ticket .md\:flex-row {
+        flex-direction: column !important;
+    }
+    
+    #page-e-ticket .md\:w-3\/5,
+    #page-e-ticket .md\:w-2\/5 {
+        width: 100% !important;
+    }
+    
+    #page-e-ticket .border-l {
+        border-left: none !important;
+        border-top: 1px solid #e2e8f0 !important;
+        padding-left: 0 !important;
+        padding-top: 1.5rem !important;
+        margin-top: 1.5rem;
+    }
+    
+    #page-e-ticket .flex-col.sm\:flex-row {
+        flex-direction: column !important;
+    }
+    
+    #page-e-ticket button {
+        width: 100% !important;
+    }
+    
+    #e-ticket-card {
+        flex-direction: column;
+    }
+    
+    #e-ticket-card .md\:w-2\/5,
+    #e-ticket-card .md\:w-3\/5 {
+        width: 100%;
     }
 }
 
 /* ============================================
-   PAYMENT PAGE CONSISTENT STYLING
+   10. PEMBAYARAN PAGE
    ============================================ */
 #page-pembayaran {
     background: #d2e4f9 !important;
+    min-height: 100vh;
 }
 
 #page-pembayaran nav {
     background: #2b6cb0 !important;
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    height: 70px;
+    padding: 1rem 1.5rem;
+}
+
+#page-pembayaran > .bg-white.shadow-sm {
+    position: relative;
+    z-index: 40;
+    margin-top: 0;
+}
+
+#page-pembayaran main {
+    padding: 1.5rem 1rem !important;
 }
 
 #page-pembayaran .sticky {
@@ -857,13 +705,18 @@ nav img[alt="Logo Bioskop 7"]:hover {
 }
 
 #page-pembayaran .font-mono {
-    font-family: 'Courier New', monospace;
+    font-family: 'Courier New', Courier, monospace;
     letter-spacing: 2px;
 }
 
-/* ============================================
-   PAYMENT TIMER STYLES
-   ============================================ */
+#page-pembayaran .grid {
+    gap: 1.5rem;
+}
+
+.border-2.hover\:border-sky-500 {
+    transition: all 0.3s ease;
+}
+
 .font-mono {
     font-family: 'Courier New', Courier, monospace;
     letter-spacing: 2px;
@@ -878,53 +731,419 @@ nav img[alt="Logo Bioskop 7"]:hover {
     animation: pulse-red 1s ease-in-out infinite;
 }
 
-/* Tombol cursor pointer */
 .cursor-pointer {
     cursor: pointer;
 }
 
-/* Payment page background */
-#page-pembayaran {
-    background: #d2e4f9 !important;
-}
-
-/* ============================================
-   FIX: HEADER & STEP OVERLAP
-   ============================================ */
-
-/* ============================================
-   FIX: HEADER & STEP OVERLAP - FINAL FIX
-   ============================================ */
-
-/* Header navbar - sticky di atas */
-#page-pembayaran > nav {
-    position: sticky !important;
-    top: 0;
-    z-index: 50;
-    height: 80px;
-    display: flex;
-    align-items: center;
-}
-
-/* Step indicator - tidak sticky, normal flow */
-#page-pembayaran .bg-white.shadow-sm {
-    position: relative !important;
-    z-index: 40;
-}
-
-/* Main content - JANGAN kasih margin, karena step sudah normal flow */
-#page-pembayaran main {
-    margin-top: 0 !important;
-    padding-top: 20px;
-}
-
-/* Untuk mobile */
-@media (max-width: 768px) {
-    #page-pembayaran > nav {
-        height: 70px;
+@media (max-width: 1024px) {
+    #page-pembayaran .lg\:grid-cols-3 {
+        grid-template-columns: 1fr !important;
     }
     
-    #page-pembayaran main {
-        padding-top: 15px;
+    #page-pembayaran .lg\:col-span-2,
+    #page-pembayaran .lg\:col-span-1 {
+        grid-column: span 1 !important;
+    }
+    
+    #page-pembayaran .grid {
+        grid-template-columns: 1fr !important;
+    }
+    
+    #page-pembayaran .sticky {
+        position: relative !important;
+        top: 0 !important;
+    }
+}
+
+@media (max-width: 640px) {
+    #page-pembayaran > nav {
+        height: 65px;
+        padding: 0.5rem 1rem;
+    }
+    
+    #page-pembayaran > nav .text-base {
+        font-size: 14px !important;
+    }
+    
+    #page-pembayaran > nav .text-xs {
+        font-size: 9px !important;
+    }
+    
+    #page-pembayaran .border-2.rounded-lg {
+        padding: 0.75rem !important;
+    }
+    
+    #page-pembayaran .w-14.h-14 {
+        width: 48px !important;
+        height: 48px !important;
+    }
+    
+    #page-pembayaran h3 {
+        font-size: 14px !important;
+    }
+    
+    #bank-detail .grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* ============================================
+   11. SEAT GRID RESPONSIVE
+   ============================================ */
+#seatMap {
+    display: grid;
+    gap: 8px;
+    justify-content: center;
+    padding: 10px;
+}
+
+@media (min-width: 768px) {
+    #seatMap {
+        grid-template-columns: repeat(13, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 640px) and (max-width: 767px) {
+    #seatMap {
+        grid-template-columns: repeat(13, 1fr);
+        gap: 6px;
+    }
+    
+    .seat {
+        width: 36px !important;
+        height: 36px !important;
+        font-size: 9px !important;
+    }
+}
+
+@media (max-width: 639px) {
+    #seatMap {
+        grid-template-columns: repeat(13, 1fr);
+        gap: 4px;
+        padding: 5px;
+        overflow-x: auto;
+    }
+    
+    .seat {
+        width: 28px !important;
+        height: 28px !important;
+        font-size: 8px !important;
+        padding: 0 !important;
+    }
+    
+    #seatMap > div.w-\[32px\] {
+        width: 8px !important;
+    }
+}
+
+@media (max-width: 375px) {
+    #seatMap {
+        grid-template-columns: repeat(13, 1fr);
+        gap: 3px;
+    }
+    
+    .seat {
+        width: 24px !important;
+        height: 24px !important;
+        font-size: 7px !important;
+    }
+}
+
+/* ============================================
+   12. JADWAL PAGE
+   ============================================ */
+#page-jadwal.hidden {
+    display: none !important;
+}
+
+#page-jadwal nav {
+    background: #2b6cb0 !important;
+    position: relative;
+    z-index: 10;
+}
+
+#page-jadwal main {
+    padding: 1.5rem 1rem;
+}
+
+@media (max-width: 768px) {
+    #page-jadwal .md\:grid-cols-3 {
+        grid-template-columns: 1fr !important;
+    }
+    
+    #page-jadwal .md\:col-span-2 {
+        grid-column: span 1 !important;
+    }
+    
+    #page-jadwal .self-start {
+        align-self: stretch !important;
+    }
+    
+    #page-jadwal .md\:w-1\/4 {
+        width: 100% !important;
+        max-width: 200px;
+        margin: 0 auto;
+    }
+    
+    #page-jadwal .md\:w-3\/4 {
+        width: 100% !important;
+    }
+    
+    #detail-title {
+        font-size: 1.5rem !important;
+        text-align: center;
+    }
+}
+
+@media (max-width: 640px) {
+    #page-jadwal .date-grid {
+        gap: 6px;
+        overflow-x: auto;
+    }
+    
+    #page-jadwal .date-btn {
+        flex: 0 0 60px;
+        padding: 8px 4px;
+    }
+    
+    #page-jadwal .time-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 6px;
+    }
+    
+    #page-jadwal .time-btn {
+        padding: 10px 5px !important;
+        font-size: 11px !important;
+    }
+
+    #page-jadwal nav > div {
+        justify-content: flex-start !important;
+    }
+}
+
+/* ============================================
+   13. FILM DETAILS
+   ============================================ */
+.coming-soon-message {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    color: white;
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#detail-sinopsis {
+    line-height: 1.7;
+    text-align: justify;
+}
+
+#detail-aktor {
+    font-style: italic;
+}
+
+#detail-rating, #detail-durasi, #detail-bahasa {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 11px;
+}
+
+#detail-rating {
+    background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+    color: white;
+}
+
+#detail-durasi {
+    background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%);
+    color: #1e293b;
+}
+
+#detail-bahasa {
+    background: linear-gradient(135deg, #bae6fd 0%, #7dd3fc 100%);
+    color: #0369a1;
+}
+
+/* ============================================
+   FIX: BANNER LAYOUT - TEXT KIRI, POSTER KANAN
+   (BERLAKU UNTUK SEMUA BANNER: NOW PLAYING & COMING SOON)
+   ============================================ */
+
+/* Layout untuk SEMUA banner slide */
+#slide-now-playing > div,
+#slide-coming-soon > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    #slide-now-playing > div,
+    #slide-coming-soon > div {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+/* Text section (kiri di desktop) */
+#slide-now-playing .space-y-4,
+#slide-coming-soon .space-y-4 {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    #slide-now-playing .space-y-4,
+    #slide-coming-soon .space-y-4 {
+        width: 45%;
+        text-align: left;
+    }
+}
+
+/* Poster section (kanan di desktop) */
+#slide-now-playing .relative,
+#slide-coming-soon .relative {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    #slide-now-playing .relative,
+    #slide-coming-soon .relative {
+        width: 50%;
+        max-width: 500px;
+    }
+}
+
+/* Grid poster - PENTING: Wajib 3 kolom, tidak scroll */
+#now-playing-banner,
+#coming-soon-banner {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 12px;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Poster item */
+#now-playing-banner .banner-item,
+#coming-soon-banner .banner-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Poster container - ukuran proporsional */
+.banner-item .poster-container {
+    width: 100%;
+    aspect-ratio: 2/3;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid rgba(14, 165, 233, 0.4);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    position: relative;
+}
+
+.banner-item .poster-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.banner-item .poster-container:hover img {
+    transform: scale(1.1);
+}
+
+/* Judul film di bawah poster */
+.banner-item > p {
+    font-size: 9px !important;
+    margin-top: 8px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #7dd3fc;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    width: 100%;
+}
+
+/* Badge SEGERA */
+.badge-segera {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    background: rgba(0, 0, 0, 0.85);
+    color: white;
+    font-size: 8px;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+    z-index: 10;
+}
+
+/* ============================================
+   RESPONSIVE MOBILE - AGAR TIDAK KEBESARAN
+   ============================================ */
+@media (max-width: 767px) {
+    /* Layout jadi vertikal di mobile */
+    #slide-now-playing > div,
+    #slide-coming-soon > div {
+        flex-direction: column !important;
+        gap: 1.5rem;
+    }
+    
+    /* Text & poster full width */
+    #slide-now-playing .space-y-4,
+    #slide-coming-soon .space-y-4,
+    #slide-now-playing .relative,
+    #slide-coming-soon .relative {
+        width: 100% !important;
+        max-width: 100% !important;
+        text-align: center;
+    }
+    
+    /* Grid tetap 3 kolom, gap lebih kecil */
+    #now-playing-banner,
+    #coming-soon-banner {
+        gap: 8px;
+    }
+    
+    /* Poster lebih kecil di mobile */
+    .banner-item .poster-container {
+        max-width: 100%;
+    }
+    
+    /* Judul film lebih kecil */
+    .banner-item > p {
+        font-size: 7px !important;
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-item > p {
+        font-size: 6px !important;
+    }
+    
+    #now-playing-banner,
+    #coming-soon-banner {
+        gap: 6px;
     }
 }

@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <!-- Library untuk generate PDF -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </head>
@@ -80,27 +81,31 @@
     <div class="relative z-10 p-6 md:p-8 flex items-center min-h-[400px] md:min-h-[450px]">
         
         <!-- BANNER 1: BARU RILIS FILM -->
-        <div class="banner-slide active w-full" id="slide-now-playing">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-                <!-- Left: Text Content -->
-                <div class="space-y-4 max-w-sm w-full text-center md:text-left flex-shrink-0">
-                    <span class="bg-[#0077b6] text-[10px] font-bold px-2.5 py-1 rounded-sm text-white uppercase tracking-widest">Bioskop 7</span>
-                    <h1 class="text-3xl md:text-4xl font-black tracking-tight leading-tight text-white">BARU<br>RILIS FILM</h1>
-                    <p class="text-xs text-slate-400">Film-film terbaru pilihan terbaik untuk teman waktu nontonmu.</p>
-                    <button onclick="bukaModulJadwal('Sekawan Limo')" class="w-full md:w-auto border border-sky-500 bg-[#0f172a] hover:bg-sky-600 transition px-4 py-2 rounded-sm text-[11px] font-bold tracking-wide text-white">
-                        📅 SAKSIKAN SEKARANG DI BIOSKOP 7
-                    </button>
-                </div>
-                
-                <!-- Right: Movie Posters - STATIC (NO SCROLL) -->
-                <div class="relative bg-[#1e293b]/50 border-2 border-sky-500/30 rounded-lg p-4 w-full md:w-[55%] flex-shrink-0">
-                    <p class="text-[10px] font-bold tracking-widest text-sky-400 uppercase text-center mb-4">— SEDANG TAYANG —</p>
-                    <div class="grid grid-cols-3 gap-3" id="now-playing-banner">
-                        <!-- Poster statis, tidak scroll -->
-                    </div>
-                </div>
-            </div>
+<div class="banner-slide active w-full" id="slide-now-playing">
+    <div class="flex flex-col md:flex-row justify-between items-center gap-6 md:gap-12">
+        
+        <!-- Left: Text Content -->
+        <div class="space-y-4 max-w-md w-full text-center md:text-left flex-shrink-0 order-2 md:order-1">
+            <span class="bg-[#0077b6] text-[10px] font-bold px-2.5 py-1 rounded-sm text-white uppercase tracking-widest inline-block">BIOSKOP 7</span>
+            <h1 class="text-3xl md:text-5xl font-black tracking-tight leading-tight text-white">BARU<br>RILIS FILM</h1>
+            <p class="text-sm md:text-base text-slate-300">Film-film terbaru pilihan terbaik untuk teman waktu nontonmu.</p>
+            <button onclick="bukaModulJadwal('Sekawan Limo')" class="w-full md:w-auto border-2 border-sky-500 bg-transparent hover:bg-sky-600 transition px-6 py-3 rounded-sm text-sm font-bold tracking-wide text-white">
+                📅 SAKSIKAN SEKARANG DI BIOSKOP 7
+            </button>
         </div>
+        
+   <!-- Right: Movie Posters - GRID 3 POSTER -->
+<div class="relative bg-[#1e293b]/30 border-2 border-sky-500/30 rounded-xl p-6 w-full md:w-[50%] flex-shrink-0 order-1 md:order-2">
+    <p class="text-[10px] font-bold tracking-widest text-sky-400 uppercase text-center mb-6">— SEDANG TAYANG —</p>
+    
+    <!-- Grid 3 Poster -->
+    <div class="grid grid-cols-3 gap-3" id="now-playing-banner">
+        <!-- Poster akan di-render di sini oleh JavaScript -->
+    </div>
+</div>
+        
+    </div>
+</div>
 
         <!-- BANNER 2: PANDUAN USIA PENONTON - SIMPLE -->
         <div class="banner-slide w-full" id="slide-age-rating">
@@ -134,29 +139,30 @@
         </div>
 
         <!-- BANNER 3: COMING SOON -->
-        <div class="banner-slide w-full" id="slide-coming-soon">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-                <!-- Left: Text Content -->
-                <div class="space-y-4 max-w-sm w-full text-center md:text-left flex-shrink-0">
-                    <span class="bg-[#0077b6] text-[10px] font-bold px-2.5 py-1 rounded-sm text-white uppercase tracking-widest">Bioskop 7</span>
-                    <h1 class="text-3xl md:text-4xl font-black tracking-tight leading-tight text-white">COMING<br>SOON</h1>
-                    <p class="text-xs text-slate-400">Film-film pilihan yang akan segera tayang di Bioskop 7.</p>
-                    <button class="w-full md:w-auto border border-sky-500 bg-[#0f172a] hover:bg-sky-600 transition px-4 py-2 rounded-sm text-[11px] font-bold tracking-wide text-white">
-                        📅 SAKSIKAN SEGERA DI BIOSKOP 7
-                    </button>
-                </div>
-                
-                <!-- Right: Coming Soon Posters - STATIC (NO SCROLL) -->
-                <div class="relative bg-[#1e293b]/50 border-2 border-sky-500/30 rounded-lg p-4 w-full md:w-[55%] flex-shrink-0">
-                    <p class="text-[10px] font-bold tracking-widest text-sky-400 uppercase text-center mb-4">— COMING SOON —</p>
-                    <div class="grid grid-cols-3 gap-3" id="coming-soon-banner">
-                        <!-- Poster statis, tidak scroll -->
-                    </div>
-                </div>
-            </div>
+<!-- BANNER 3: COMING SOON -->
+<div class="banner-slide w-full" id="slide-coming-soon">
+    <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+        <!-- Left: Text Content -->
+        <div class="space-y-4 max-w-sm w-full text-center md:text-left flex-shrink-0">
+            <span class="bg-[#0077b6] text-[10px] font-bold px-2.5 py-1 rounded-sm text-white uppercase tracking-widest">Bioskop 7</span>
+            <h1 class="text-3xl md:text-4xl font-black tracking-tight leading-tight text-white">COMING<br>SOON</h1>
+            <p class="text-xs text-slate-400">Film-film pilihan yang akan segera tayang di Bioskop 7.</p>
+            <button class="w-full md:w-auto border border-sky-500 bg-[#0f172a] hover:bg-sky-600 transition px-4 py-2 rounded-sm text-[11px] font-bold tracking-wide text-white">
+                📅 SAKSIKAN SEGERA DI BIOSKOP 7
+            </button>
         </div>
         
+        <!-- Right: Coming Soon Posters - GRID 3 POSTER -->
+        <div class="relative bg-[#1e293b]/50 border-2 border-sky-500/30 rounded-lg p-4 w-full md:w-[55%] flex-shrink-0">
+            <p class="text-[10px] font-bold tracking-widest text-sky-400 uppercase text-center mb-4">— COMING SOON —</p>
+            
+            <!-- Grid 3 Poster -->
+            <div class="grid grid-cols-3 gap-3" id="coming-soon-banner">
+                <!-- Poster akan di-render di sini oleh JavaScript -->
+            </div>
+        </div>
     </div>
+</div>
     
     <!-- Navigation Dots -->
     <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2 z-20">
@@ -357,48 +363,52 @@
 <div id="page-pembayaran" class="w-full min-h-screen hidden bg-[#d2e4f9]">
     
     <!-- Header dengan Timer -->
-<nav class="bg-[#2b6cb0] text-white px-6 py-4 shadow-md sticky top-0 z-50" style="height: 80px;">
-        <div class="max-w-4xl mx-auto flex items-center justify-between">
+    <nav class="bg-[#2b6cb0] text-white px-6 py-3 shadow-md fixed w-full top-0 z-50" style="height: 70px;">
+        <div class="max-w-6xl mx-auto flex items-center justify-between">
             <div class="flex items-center gap-3">
-                <button onclick="kembaliKeJadwal()" class="hover:bg-white/20 p-2 rounded-lg transition cursor-pointer">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <button onclick="kembaliKeJadwal()" class="hover:bg-white/20 p-1.5 rounded-lg transition cursor-pointer">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
                     </svg>
                 </button>
-                <span class="font-bold text-lg">BIOSKOP 7 - PEMBAYARAN</span>
+                <span class="font-bold text-base md:text-lg">BIOSKOP 7 - PEMBAYARAN</span>
             </div>
             
             <!-- Timer Countdown -->
-            <div class="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg">
-                <svg class="w-5 h-5 text-yellow-300 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="flex items-center gap-2 bg-white/10 px-3 py-1.5 rounded-lg">
+                <svg class="w-4 h-4 text-yellow-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                 </svg>
                 <div class="text-right">
-                    <p class="text-[10px] font-bold">Selesaikan dalam</p>
-                    <p id="payment-timer" class="text-lg font-black font-mono text-yellow-300">30:00</p>
+                    <p class="text-[8px] font-bold leading-tight">Selesaikan dalam</p>
+                    <p id="payment-timer" class="text-base font-black font-mono text-yellow-300 leading-tight">30:00</p>
                 </div>
             </div>
         </div>
     </nav>
     
+    <!-- Spacer untuk header fixed -->
+    <div style="height: 70px;"></div>
+    
     <!-- Step Indicator -->
-    <div class="bg-white shadow-sm">
-        <div class="max-w-4xl mx-auto px-6 py-4">
+    <div class="bg-white shadow-sm py-4">
+        <div class="max-w-6xl mx-auto px-6">
             <div class="flex items-center justify-center gap-2">
                 <div class="flex items-center gap-2">
-                    <div class="w-8 h-8 rounded-full bg-sky-600 text-white flex items-center justify-center text-sm font-bold">1</div>
+                    <div class="w-7 h-7 rounded-full bg-sky-600 text-white flex items-center justify-center text-sm font-bold">1</div>
                     <span class="text-sm font-bold text-sky-600">Pembayaran</span>
                 </div>
-                <div class="w-16 h-0.5 bg-slate-300"></div>
+                <div class="w-12 h-0.5 bg-slate-300"></div>
                 <div class="flex items-center gap-2">
-                    <div class="w-8 h-8 rounded-full bg-slate-300 text-slate-600 flex items-center justify-center text-sm font-bold">2</div>
+                    <div class="w-7 h-7 rounded-full bg-slate-300 text-slate-600 flex items-center justify-center text-sm font-bold">2</div>
                     <span class="text-sm font-bold text-slate-500">Selesai</span>
                 </div>
             </div>
         </div>
     </div>
     
-    <main class="max-w-4xl mx-auto p-6">
+    <!-- Main Content Pembayaran -->
+    <main class="max-w-6xl mx-auto p-4 md:p-6">
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
             <!-- Left: Pilih Metode Pembayaran -->
             <div class="lg:col-span-2 space-y-6">
@@ -462,23 +472,66 @@
                         <button onclick="backToPaymentMethod()" class="text-sm text-sky-600 hover:text-sky-700 font-bold cursor-pointer">← Kembali</button>
                     </div>
                     
-                    <div class="space-y-3 mb-6">
-                        <div class="border-2 border-sky-500 rounded-lg p-4 bg-sky-50">
-                            <div class="flex items-center gap-3">
-                                <div class="w-12 h-12 bg-yellow-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                                    <span class="text-white font-black text-xs">MDR</span>
+                    <!-- Pilih Bank -->
+                    <div class="mb-6">
+                        <p class="text-sm font-bold text-slate-700 mb-3">Pilih Bank:</p>
+                        <div class="grid grid-cols-2 gap-3">
+                            <div class="border-2 border-sky-500 rounded-lg p-3 bg-sky-50 cursor-pointer" onclick="selectBank('mandiri')">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-10 h-10 bg-yellow-500 rounded flex items-center justify-center flex-shrink-0">
+                                        <span class="text-white font-black text-[10px]">MDR</span>
+                                    </div>
+                                    <div>
+                                        <p class="font-bold text-slate-800 text-xs">Mandiri</p>
+                                        <p class="text-[10px] text-slate-500">MITRANS</p>
+                                    </div>
                                 </div>
-                                <div class="flex-1">
-                                    <p class="font-bold text-slate-800">Bank Mandiri</p>
-                                    <p class="text-xs text-slate-500">MITRANS</p>
+                            </div>
+                            
+                            <div class="border-2 border-slate-200 rounded-lg p-3 hover:border-blue-400 cursor-pointer" onclick="selectBank('bca')">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-10 h-10 bg-blue-600 rounded flex items-center justify-center flex-shrink-0">
+                                        <span class="text-white font-black text-[10px]">BCA</span>
+                                    </div>
+                                    <div>
+                                        <p class="font-bold text-slate-800 text-xs">BCA</p>
+                                        <p class="text-[10px] text-slate-500">KlikBCA</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="border-2 border-slate-200 rounded-lg p-3 hover:border-blue-600 cursor-pointer" onclick="selectBank('bni')">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-10 h-10 bg-blue-700 rounded flex items-center justify-center flex-shrink-0">
+                                        <span class="text-white font-black text-[10px]">BNI</span>
+                                    </div>
+                                    <div>
+                                        <p class="font-bold text-slate-800 text-xs">BNI</p>
+                                        <p class="text-[10px] text-slate-500">Mobile Banking</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="border-2 border-slate-200 rounded-lg p-3 hover:border-blue-500 cursor-pointer" onclick="selectBank('bri')">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-10 h-10 bg-blue-500 rounded flex items-center justify-center flex-shrink-0">
+                                        <span class="text-white font-black text-[10px]">BRI</span>
+                                    </div>
+                                    <div>
+                                        <p class="font-bold text-slate-800 text-xs">BRI</p>
+                                        <p class="text-[10px] text-slate-500">BRImo</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        
+                    </div>
+                    
+                    <!-- Detail Transfer -->
+                    <div id="bank-transfer-info" class="hidden space-y-4">
                         <div class="bg-slate-50 rounded-lg p-4 space-y-3">
                             <div>
                                 <p class="text-xs text-slate-500 uppercase font-bold mb-1">Nomor Rekening</p>
-                                <p class="text-lg font-black text-slate-800 font-mono">1234567890</p>
+                                <p id="bank-account-number" class="text-lg font-black text-slate-800 font-mono tracking-wider">1234567890</p>
                             </div>
                             <div>
                                 <p class="text-xs text-slate-500 uppercase font-bold mb-1">Atas Nama</p>
@@ -489,11 +542,17 @@
                                 <p id="bank-transfer-amount" class="text-2xl font-black text-sky-600">Rp. 35.000</p>
                             </div>
                         </div>
+                        
+                        <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-3">
+                            <p class="text-xs text-yellow-800">
+                                <strong>💡 Tips:</strong> Transfer sesuai dengan jumlah yang tertera untuk verifikasi otomatis
+                            </p>
+                        </div>
+                        
+                        <button onclick="confirmPayment('bank')" class="w-full bg-sky-600 hover:bg-sky-700 text-white font-bold py-3 rounded-lg transition cursor-pointer">
+                            SAYA SUDAH TRANSFER
+                        </button>
                     </div>
-                    
-                    <button onclick="confirmPayment('bank')" class="w-full bg-sky-600 hover:bg-sky-700 text-white font-bold py-3 rounded-lg transition cursor-pointer">
-                        SAYA SUDAH TRANSFER
-                    </button>
                 </div>
             </div>
             
@@ -534,11 +593,12 @@
         </div>
     </main>
 </div>
-<!-- HALAMAN TIMEOUT (seperti Shopee) -->
+<!-- AKHIR page-pembayaran -->
+
+<!-- HALAMAN TIMEOUT -->
 <div id="page-timeout" class="w-full min-h-screen hidden bg-gradient-to-b from-red-50 to-orange-50">
     <main class="max-w-2xl mx-auto p-6 flex flex-col items-center justify-center min-h-screen">
         <div class="bg-white rounded-2xl shadow-2xl p-8 md:p-12 text-center max-w-lg">
-            <!-- Icon Timeout -->
             <div class="w-24 h-24 mx-auto mb-6 bg-red-100 rounded-full flex items-center justify-center animate-pulse">
                 <svg class="w-12 h-12 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
@@ -566,110 +626,152 @@
         </div>
     </main>
 </div>
+<!-- AKHIR page-timeout -->
 
-    <div id="page-jadwal" class="w-full min-h-screen hidden">
-<!-- Header Jadwal (TANPA TIMER) -->
-<nav class="bg-[#2b6cb0] text-white px-6 py-4 shadow-md">
-    <div class="max-w-4xl mx-auto flex items-center gap-3">
-        <button onclick="kembaliKeHome()" class="hover:bg-white/20 p-2 rounded-lg transition cursor-pointer">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-            </svg>
-        </button>
-        <span class="font-bold text-lg">BIOSKOP 7 - JADWAL</span>
-    </div>
-</nav>
-        
-        <main class="max-w-4xl mx-auto p-4 md:p-6 grid grid-cols-1 md:grid-cols-3 gap-6">
-            
-            <div class="space-y-3 bg-white p-4 rounded-md shadow-sm border border-slate-200 self-start">
-                <div class="w-full aspect-[2/3] bg-slate-800 rounded-sm overflow-hidden shadow">
-                    <img id="detail-poster" src="https://placehold.co/300x450/1e293b/fff?text=Poster" class="w-full h-full object-cover">
+<div id="page-jadwal" class="w-full min-h-screen hidden">
+    <!-- Header Jadwal -->
+    <nav class="bg-[#2b6cb0] text-white px-6 py-4 shadow-md">
+        <div class="max-w-6xl mx-auto flex items-center justify-start gap-3">
+            <button onclick="kembaliKeHome()" class="hover:bg-white/20 p-2 rounded-lg transition cursor-pointer flex-shrink-0">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
+            </button>
+            <span class="font-bold text-lg">BIOSKOP 7 - JADWAL</span>
+        </div>
+    </nav>
+    
+    <main class="max-w-6xl mx-auto p-4 md:p-6">
+        <!-- Film Info Section -->
+        <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+            <div class="flex flex-col md:flex-row gap-6">
+                <!-- Poster -->
+                <div class="md:w-1/4 flex-shrink-0">
+                    <div class="aspect-[2/3] bg-slate-800 rounded-lg overflow-hidden shadow-lg">
+                        <img id="detail-poster" src="https://placehold.co/300x450/1e293b/fff?text=Poster" 
+                             class="w-full h-full object-cover">
+                    </div>
                 </div>
-                <h2 id="detail-title" class="text-base font-black text-slate-900 uppercase tracking-wide">Nama Film</h2>
-                <p class="text-[11px] text-slate-500 leading-relaxed">Bahasa: Indonesia<br>Genre: Komedi / Drama / Horor</p>
-            </div>
-            
-            <div class="md:col-span-2 space-y-5 bg-white p-4 rounded-md shadow-sm border border-slate-200 self-start">
-                <h3 class="section-title-custom text-xs font-bold tracking-wide">1. PILIH TANGGAL & WAKTU</h3>
                 
-                <div class="date-grid" id="container-tanggal"></div>
-                
-                <div class="time-grid mt-3" id="container-jam"></div>
-                
-                <div class="pt-3 border-t border-slate-100 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
+                <!-- Film Details -->
+                <div class="md:w-3/4 space-y-4">
                     <div>
-                        <p class="text-[9px] font-bold text-slate-400 uppercase tracking-wider">WAKTU PILIHAN</p>
-                        <p id="selectedLabel" class="text-xs font-bold text-slate-700">Belum memilih jadwal</p>
+                        <h2 id="detail-title" class="text-2xl md:text-3xl font-black text-slate-900 mb-2">Nama Film</h2>
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span id="detail-rating" class="bg-red-600 text-white text-xs font-bold px-2 py-1 rounded">R</span>
+                            <span id="detail-durasi" class="bg-slate-200 text-slate-700 text-xs font-bold px-2 py-1 rounded">118 menit</span>
+                            <span id="detail-bahasa" class="bg-sky-100 text-sky-700 text-xs font-bold px-2 py-1 rounded">Indonesia</span>
+                        </div>
                     </div>
                     
-                    <div class="flex items-center gap-2 w-full sm:w-auto justify-end">
-                        <button onclick="kembaliKeHome()" class="bg-slate-100 hover:bg-slate-200 text-slate-700 text-[10px] font-bold px-4 py-2 rounded-sm tracking-wide transition uppercase border border-slate-200 shadow-sm min-w-[110px]">
-                            ← KEMBALI
-                        </button>
-                        <button id="btn-pilih-kursi" onclick="bukaModulKursi()" disabled class="bg-slate-900 hover:bg-black disabled:opacity-40 disabled:cursor-not-allowed text-white text-[10px] font-bold px-4 py-2 rounded-sm tracking-wide transition uppercase shadow-sm min-w-[110px]">
-                            PILIH KURSI →
-                        </button>
+                    <!-- Genre -->
+                    <div>
+                        <p class="text-xs font-bold text-slate-500 uppercase mb-1">Genre</p>
+                        <p id="detail-genre" class="text-sm font-bold text-slate-800">Horror Komedi</p>
+                    </div>
+                    
+                    <!-- Sinopsis -->
+                    <div>
+                        <p class="text-xs font-bold text-slate-500 uppercase mb-1">Sinopsis</p>
+                        <p id="detail-sinopsis" class="text-sm text-slate-700 leading-relaxed">
+                            Masukkan sinopsis film
+                        </p>
+                    </div>
+                    
+                    <!-- Aktor -->
+                    <div>
+                        <p class="text-xs font-bold text-slate-500 uppercase mb-1">Pemeran</p>
+                        <p id="detail-aktor" class="text-sm text-slate-700">Masukkan Nama Aktor</p>
                     </div>
                 </div>
             </div>
-        </main>
-    </div>
-
-  <div id="page-kursi" class="w-full min-h-screen hidden">
-        <nav class="bg-[#2b6cb0] text-white px-6 py-4 flex items-center shadow-md w-full">
-            <span class="font-bold text-lg tracking-wider">BIOSKOP 7 - PILIH KURSI</span>
-        </nav>
-
-        <main class="max-w-3xl mx-auto p-4 md:p-6">
-            <div class="bg-white p-6 rounded-md shadow-sm border border-slate-200">
-                <h3 class="section-title-custom text-center mb-4 text-sm font-bold tracking-wide">PILIH KURSI</h3>
-                
-                <div class="w-full bg-slate-200 text-center text-[10px] font-bold py-1 text-slate-500 rounded-sm mb-6 tracking-widest uppercase">
-                    LAYAR BIOSKOP
-                </div>
-
-                <div class="w-full flex justify-center">
-                    <div id="seatMap" class="grid gap-2" style="grid-template-columns: repeat(13, minmax(0, 1fr));">
-                        </div>
+        </div>
+        
+        <!-- Jadwal Section -->
+        <div class="bg-white rounded-lg shadow-md p-6">
+            <h3 class="section-title-custom text-lg font-bold mb-4">1. PILIH TANGGAL & WAKTU</h3>
+            
+            <div class="date-grid" id="container-tanggal"></div>
+            
+            <div class="time-grid mt-4" id="container-jam"></div>
+            
+            <div class="pt-4 mt-6 border-t border-slate-200 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
+                <div>
+                    <p class="text-[9px] font-bold text-slate-400 uppercase tracking-wider">WAKTU PILIHAN</p>
+                    <p id="selectedLabel" class="text-sm font-bold text-slate-800">Belum memilih jadwal</p>
                 </div>
                 
-                <div class="pt-4 mt-6 border-t border-slate-100 flex flex-col sm:flex-row justify-between items-center gap-4">
-                    <div class="text-center sm:text-left">
-                        <p class="text-[9px] font-bold text-slate-400 uppercase tracking-wider">KURSI PILIHAN</p>
-                        <p id="selectedSeatsLabel" class="text-xs font-bold text-slate-700">Belum memilih kursi</p>
-                    </div>
-                    <div class="flex gap-2">
-                        <button onclick="kembaliKeJadwal()" class="bg-slate-100 hover:bg-slate-200 text-slate-700 text-[11px] font-bold px-4 py-2 rounded-sm transition uppercase shadow-sm border border-slate-200">
-                            ← JADWAL
-                        </button>
-                        <button id="btn-konfirmasi-tiket" disabled onclick="bukaModulKonfirmasi()" class="bg-slate-900 hover:bg-black text-white text-[11px] font-bold px-4 py-2 rounded-sm transition uppercase disabled:opacity-40 disabled:cursor-not-allowed shadow-sm">
-                            KONFIRMASI →
-                        </button>
-                    </div>
+                <div class="flex items-center gap-2 w-full sm:w-auto justify-end">
+                    <button onclick="kembaliKeHome()" class="bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm font-bold px-6 py-2 rounded-lg transition uppercase">
+                        ← KEMBALI
+                    </button>
+                    <button id="btn-pilih-kursi" onclick="bukaModulKursi()" disabled 
+                            class="bg-slate-900 hover:bg-black disabled:opacity-40 disabled:cursor-not-allowed text-white text-sm font-bold px-6 py-2 rounded-lg transition uppercase">
+                        PILIH KURSI →
+                    </button>
                 </div>
             </div>
-        </main>
-    </div>
+        </div>
+    </main>
+</div>
+<!-- AKHIR page-jadwal -->
+
+<!-- HALAMAN KURSI -->
+<div id="page-kursi" class="w-full min-h-screen hidden">
+    <nav class="bg-[#2b6cb0] text-white px-6 py-4 flex items-center shadow-md w-full">
+        <span class="font-bold text-lg tracking-wider">BIOSKOP 7 - PILIH KURSI</span>
+    </nav>
+
+    <main class="max-w-3xl mx-auto p-4 md:p-6">
+        <div class="bg-white p-6 rounded-md shadow-sm border border-slate-200">
+            <h3 class="section-title-custom text-center mb-4 text-sm font-bold tracking-wide">PILIH KURSI</h3>
+            
+            <div class="w-full bg-slate-200 text-center text-[10px] font-bold py-1 text-slate-500 rounded-sm mb-6 tracking-widest uppercase">
+                LAYAR BIOSKOP
+            </div>
+
+            <div class="w-full flex justify-center overflow-x-auto">
+                <div id="seatMap" class="grid gap-2" style="grid-template-columns: repeat(13, minmax(0, 1fr));">
+                </div>
+            </div>
+            
+            <div class="pt-4 mt-6 border-t border-slate-100 flex flex-col sm:flex-row justify-between items-center gap-4">
+                <div class="text-center sm:text-left">
+                    <p class="text-[9px] font-bold text-slate-400 uppercase tracking-wider">KURSI PILIHAN</p>
+                    <p id="selectedSeatsLabel" class="text-xs font-bold text-slate-700">Belum memilih kursi</p>
+                </div>
+                <div class="flex gap-2">
+                    <button onclick="kembaliKeJadwal()" class="bg-slate-100 hover:bg-slate-200 text-slate-700 text-[11px] font-bold px-4 py-2 rounded-sm transition uppercase shadow-sm border border-slate-200">
+                        ← JADWAL
+                    </button>
+                    <button id="btn-konfirmasi-tiket" disabled onclick="bukaModulKonfirmasi()" class="bg-slate-900 hover:bg-black text-white text-[11px] font-bold px-4 py-2 rounded-sm transition uppercase disabled:opacity-40 disabled:cursor-not-allowed shadow-sm">
+                        KONFIRMASI →
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+<!-- AKHIR page-kursi -->
 
     <div id="page-auth" class="auth-module-wrapper hidden-wrapper">
         <div class="auth-wrapper">
             <section id="section-login" class="auth-card dynamic-section">
                 <h2 class="auth-h2">LOGIN</h2>
                 <form id="form-login">
-                    <div class="input-group">
-                        <label>NAMA PENGGUNA</label>
-                        <input type="text" id="login-username" placeholder="Masukkan Nama Pengguna Anda" required>
-                    </div>
-                    <div class="input-group">
-                        <label>SANDI</label>
-                        <input type="password" id="login-password" placeholder="Masukkan Sandi Anda" required>
-                    </div>
-                    <div class="action-links">
-                        <a href="#" onclick="switchSection('section-forgot')">LUPA KATA SANDI?</a>
-                    </div>
-                    <button type="submit" class="btn-black">MASUK</button>
-                </form>
+    <div class="input-group">
+        <label>NAMA PENGGUNA</label>
+        <input type="text" id="login-username" placeholder="Masukkan Nama Pengguna Anda" required>
+    </div>
+    <div class="input-group">
+        <label>SANDI</label>
+        <input type="password" id="login-password" placeholder="Masukkan Sandi Anda" required>
+    </div>
+    <div class="action-links">
+        <a href="#" onclick="switchSection('section-forgot')">LUPA KATA SANDI?</a>
+    </div>
+    <button type="button" onclick="handleLogin()" class="btn-black">MASUK</button>
+</form>
                 <p class="switch-text">Belum punya akun? <a href="#" onclick="switchSection('section-register')">BUAT AKUN</a></p>
                 <div class="back-link">
                     <a href="#" onclick="closeAuthModule()">← KEMBALI KE BERANDA</a>
@@ -691,7 +793,7 @@
                         <label>SANDI</label>
                         <input type="password" id="reg-password" placeholder="Masukkan Sandi" required>
                     </div>
-                    <button type="submit" class="btn-black">REGISTRASI</button>
+                  <button type="button" onclick="handleRegister()" class="btn-black">REGISTRASI</button>
                 </form>
                 <p class="switch-text">Sudah punya akun? <a href="#" onclick="switchSection('section-login')">LOGIN</a></p>
             </section>
@@ -720,7 +822,7 @@
                         <input type="text" class="otp-box" maxlength="1" required>
                         <input type="text" class="otp-box" maxlength="1" required>
                     </div>
-                    <button type="submit" class="btn-black">VERIFIKASI</button>
+                   <button type="button" onclick="handleOtp()" class="btn-black">VERIFIKASI</button>
                 </form>
                 <div class="back-link">
                     <a href="#" onclick="switchSection('section-login')">BATAL</a>
